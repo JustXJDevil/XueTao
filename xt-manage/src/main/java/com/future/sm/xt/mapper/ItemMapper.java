@@ -15,4 +15,6 @@ public interface ItemMapper extends BaseMapper<Item>{
     List<?> findItemsByPage(@Param("page") Integer page,
                             @Param("rows") Integer rows);
 
+
+    int saveItem(Item item);
 }

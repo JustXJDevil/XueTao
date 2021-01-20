@@ -8,5 +8,11 @@
         order by updated desc
         limit #{page},#{rows}
     </select>
-	
+
+    <insert id="saveItem">
+        insert into tb_item
+        (title,sell_point,price,num,barcode,image,cid,created,updated)
+        values
+        (#{title},#{sellPoint},#{price},#{num},#{barcode},#{image},#{cid},now(),now())
+    </insert>
 </mapper>

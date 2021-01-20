@@ -32,4 +32,27 @@ public class ItemServiceImpl implements ItemService {
 			throw new ServiceException("保存失败");
 
 	}
+
+	@Override
+	public void updateById(Item item) {
+		int row = itemMapper.updateItem(item);
+		if (row == 0) {
+			throw new ServiceException("更新失败");
+		}
+	}
+
+	/*1:正常  2:下架*/
+	@Override
+	public void instockByIds(Long[] ids) {
+		int row = itemMapper.instockByIds(ids);
+		if (row == 0)
+			throw new ServiceException("下架失败");
+	}
+
+	@Override
+	public void reshelfByIds(Long[] ids) {
+		int row = itemMapper.reshelfByids(ids);
+		if (row == 0)
+			throw new ServiceException("上架失败");
+	}
 }

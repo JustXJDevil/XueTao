@@ -31,4 +31,25 @@ public class ItemController {
 		itemService.saveItem(item);
 		return SysResult.success();
 	}
+
+	@ResponseBody
+	@PostMapping("update")
+	public SysResult update(Item item){
+		itemService.updateById(item);
+		return SysResult.success();
+	}
+
+	@ResponseBody
+	@PostMapping("instock")
+	public SysResult instock(Long... ids){
+		itemService.instockByIds(ids);
+		return SysResult.success();
+	}
+
+	@ResponseBody
+	@PostMapping("reshelf")
+	public SysResult reshelf(Long... ids){
+		itemService.reshelfByIds(ids);
+		return SysResult.success();
+	}
 }

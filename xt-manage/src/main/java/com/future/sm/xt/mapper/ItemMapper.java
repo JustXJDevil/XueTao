@@ -17,4 +17,10 @@ public interface ItemMapper extends BaseMapper<Item>{
 
 
     int saveItem(Item item);
+
+    int updateItem(Item item);
+
+    int instockByIds(Long[] ids);
+
+    int reshelfByids(Long[] ids);
 }

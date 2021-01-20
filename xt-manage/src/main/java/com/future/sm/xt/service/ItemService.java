@@ -8,4 +8,10 @@ public interface ItemService {
     EasyUITable findItems(Integer page, Integer rows);
 
     void saveItem(Item item);
+
+    void updateById(Item item);
+
+    void instockByIds(Long[] ids);
+
+    void reshelfByIds(Long[] ids);
 }

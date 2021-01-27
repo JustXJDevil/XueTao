@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.future.sm.xt.mapper")
-public class xtApplication {
+public class ManagerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(xtApplication.class,args);
+        SpringApplication.run(ManagerApplication.class,args);
     }
 }

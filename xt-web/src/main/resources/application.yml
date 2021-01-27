@@ -1,0 +1,10 @@
+server:
+  port: 8092
+  servlet:
+    context-path: /
+
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/views/

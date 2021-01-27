@@ -18,7 +18,6 @@ public class ItemCatController {
     @ResponseBody
     public String queryItemName(Long itemCatId){
         String name = itemCatService.getNameById(itemCatId);
-        System.out.println("name: "+name);
         return name;
     }
 

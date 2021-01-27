@@ -23,4 +23,9 @@ public interface ItemMapper extends BaseMapper<Item>{
     int instockByIds(Long[] ids);
 
     int reshelfByids(Long[] ids);
+
+    int deleteItemsByIds(Long[] ids);
+
+    @Select("select * from tb_item where id=#{itemId}")
+    Item findItemById(Long itemId);
 }

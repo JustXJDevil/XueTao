@@ -1,5 +1,6 @@
 package com.future.sm.xt.service.impl;
 
+import com.future.sm.xt.annotation.CacheFind;
 import com.future.sm.xt.mapper.ItemCatMapper;
 import com.future.sm.xt.pojo.Item;
 import com.future.sm.xt.pojo.ItemCat;
@@ -22,6 +23,7 @@ public class ItemCatServiceImpl implements ItemCatService {
         return name;
     }
 
+    @CacheFind
     @Override
     public List<EasyUITree> getListByParentId(Long parentId) {
         List<ItemCat> itemCats = itemCatMapper.getListByParentId(parentId);

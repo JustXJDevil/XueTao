@@ -9,7 +9,7 @@
         limit #{page},#{rows}
     </select>
 
-    <insert id="saveItem">
+    <insert id="saveItem" keyProperty="id" useGeneratedKeys="true">
         insert into tb_item
         (title,sell_point,price,num,barcode,image,cid,created,updated)
         values
@@ -37,4 +37,12 @@
             #{id}
         </foreach>
     </update>
+
+    <delete id="deleteItemsByIds">
+        delete from tb_item where
+        id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

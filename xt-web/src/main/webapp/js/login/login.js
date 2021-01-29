@@ -369,7 +369,7 @@ $("#loginsubmit").click(function () {
         var _password = $("#formlogin [name=password]").val();
         $.ajax({
             type: "POST",
-            url: "/user/doLogin?r=" + Math.random(),
+            url: "/user/doLogin?r=" + Math.random(),//加随机数是为了避免浏览器缓存
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
             data: {username:_username,password:_password},
             dataType : "json",

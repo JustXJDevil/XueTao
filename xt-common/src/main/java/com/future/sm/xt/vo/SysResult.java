@@ -15,6 +15,7 @@ public class SysResult {
     private String msg;         //提示信息
     private Object data;        //返回的数据
 
+
     /*只是告知用户操作成功，不需要返回数据*/
     public static SysResult success(){
         return new SysResult(200,null,null);
@@ -33,5 +34,8 @@ public class SysResult {
     /*失败*/
     public static SysResult fail(){
         return new SysResult(201,null,null);
+    }
+    public static SysResult fail(String msg,Object data){
+        return new SysResult(201,msg,false);
     }
 }

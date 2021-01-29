@@ -8,3 +8,11 @@ spring:
     view:
       suffix: .jsp
       prefix: /WEB-INF/views/
+
+dubbo:
+  scan:
+    basePackages: com.future.sm.xt
+  application:
+    name: consumer-web
+  registry:
+    address: zookeeper://192.168.95.128:2181?backup=192.168.95.128:2182,192.168.95.128:2183

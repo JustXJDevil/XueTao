@@ -1,0 +1,32 @@
+server:
+  port: 8093
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql://192.168.95.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+
+mybatis:
+  type-aliases-package: com.future.sm.xt.pojo
+  mapper-locations: mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+#配置dubbo
+dubbo:
+  scan:
+    basePackages: com.future.sm.xt
+  application:
+    name: provider-user
+  registry:
+    address: zookeeper://192.168.95.128:2181?backup=192.168.95.128:2182,192.168.95.128:2183
+  protocol: #协议
+    name: dubbo #使用dubbo默认的协议
+    port: 20880 #端口号唯一
+
+
+logging:
+  level:
+    com.future.sm.xt.mapper: debug

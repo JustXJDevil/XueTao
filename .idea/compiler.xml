@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xt-sso" />
         <module name="xt-manage" />
         <module name="xt-web" />
         <module name="xt-common" />
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="xt-common" options="-parameters" />
       <module name="xt-manage" options="-parameters" />
+      <module name="xt-sso" options="-parameters" />
       <module name="xt-web" options="-parameters" />
     </option>
   </component>

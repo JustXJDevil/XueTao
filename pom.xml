@@ -11,6 +11,7 @@
         <module>xt-common</module>
         <module>xt-manage</module>
         <module>xt-web</module>
+        <module>xt-sso</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -113,6 +114,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
         </dependency>
     </dependencies>
 
